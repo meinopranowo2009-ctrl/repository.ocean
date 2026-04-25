@@ -1,11 +1,8 @@
-/* Import Google font - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -13,7 +10,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f0faff;
+  background: linear-gradient(135deg, #005f73, #0a9396, #94d2bd);
+}
+
+.back-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.25);
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.back-home:hover {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .wrapper {
@@ -22,49 +35,17 @@ body {
   width: 100%;
   border-radius: 12px;
   padding: 20px 30px 120px;
-  background: #4070f4;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-}
-
-.form.login {
-  position: absolute;
-  left: 50%;
-  bottom: -86%;
-  transform: translateX(-50%);
-  width: calc(100% + 220px);
-  padding: 20px 140px;
-  border-radius: 50%;
-  height: 100%;
-  background: #fff;
-  transition: all 0.6s ease;
-}
-
-.wrapper.active .form.login {
-  bottom: -15%;
-  border-radius: 35%;
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form header {
   font-size: 30px;
   text-align: center;
-  color: #fff;
+  color: #005f73;
   font-weight: 600;
   cursor: pointer;
-}
-
-.form.login header {
-  color: #333;
-  opacity: 0.6;
-}
-
-.wrapper.active .form.login header {
-  opacity: 1;
-}
-
-.wrapper.active .signup header {
-  opacity: 0.6;
 }
 
 .wrapper form {
@@ -80,21 +61,21 @@ form input {
   border: none;
   padding: 0 15px;
   font-size: 16px;
-  font-weight: 400;
   color: #333;
   border-radius: 8px;
-  background: #fff;
+  background: #f2f2f2;
 }
 
-.form.login input {
-  border: 1px solid #aaa;
+form input[type="submit"] {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #005f73;
+  color: #ffffff;
 }
 
-.form.login input:focus {
-  box-shadow: 0 1px 0 #ddd;
-}
-
-form .checkbox {
+.checkbox {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -103,17 +84,17 @@ form .checkbox {
 .checkbox input[type="checkbox"] {
   height: 16px;
   width: 16px;
-  accent-color: #fff;
+  accent-color: #005f73;
   cursor: pointer;
 }
 
-form .checkbox label {
+.checkbox label {
   cursor: pointer;
-  color: #fff;
+  color: #333;
 }
 
 form a {
-  color: #333;
+  color: #005f73;
   text-decoration: none;
 }
 
@@ -121,24 +102,53 @@ form a:hover {
   text-decoration: underline;
 }
 
-form input[type="submit"] {
-  margin-top: 15px;
-  padding: none;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
+/* Bagian Login yang bisa naik-turun */
+.form.login {
+  position: absolute;
+  left: 50%;
+  bottom: -86%;
+  transform: translateX(-50%);
+  width: calc(100% + 220px);
+  padding: 20px 140px;
+  border-radius: 50%;
+  height: 100%;
+  background: #ffffff;
+  transition: all 0.6s ease;
 }
 
-.form.login input[type="submit"] {
-  background: #4070f4;
-  color: #fff;
-  border: none;
+.wrapper.active .form.login {
+  bottom: -15%;
+  border-radius: 35%;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 }
 
-#loginPage {
-  display: none;
+.form.login header {
+  color: #333;
+  opacity: 0.6;
 }
 
-#homePage {
-  display: block;
+.wrapper.active .form.login header {
+  opacity: 1;
+}
+
+.wrapper.active .signup header {
+  opacity: 0.6;
+}
+
+/* Supaya lebih nyaman di HP */
+@media screen and (max-width: 520px) {
+  .wrapper {
+    max-width: 90%;
+    padding: 20px 20px 110px;
+  }
+
+  .form.login {
+    width: calc(100% + 160px);
+    padding: 20px 100px;
+  }
+
+  .back-home {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
 }
