@@ -359,3 +359,15 @@ h2 { margin-top: 0; }
     .tm-drinks-nav > ul > li { margin-bottom: 10px; }
     .tm-drinks-nav > ul > li > a { display: block; }
 }
+
+.tm-map-container {
+  margin-bottom: 20px;
+  padding: 30px;
+  color: white;
+}
+
+.tm-map-container iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
