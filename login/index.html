@@ -20,18 +20,19 @@
   <body>
     <section class="wrapper">
       <div class="form signup">
-        <header>Daftar</header>
-        <form action="#">
-          <input type="text" placeholder="Full name" required />
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        <header>Register</header>
+        <form id="registerForm">
+          <input type="text" id="username" placeholder="Nama Pengguna" required />
+          <input type="text" id="email" placeholder="Email" required />
+          <input type="password" id="password" placeholder="Password" required />
           <div class="checkbox">
             <input type="checkbox" id="signupCheck" />
             <label for="signupCheck">I accept all terms & conditions</label>
           </div>
-          <input type="submit" value="Signup" />
+          <input type="submit" value="Daftar" />
         </form>
       </div>
+      <script src="js/register.js" defer></script>
 
       <div class="form login">
         <header>Login</header>
