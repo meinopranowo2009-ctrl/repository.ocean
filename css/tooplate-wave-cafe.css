@@ -166,15 +166,15 @@ h2 { margin-top: 0; }
 
 .tm-list-item-img {
     margin-right: 20px;
-    width: 160px;
+    width: 200px;
     height: 200px;
     background-color: #099;
 }
 
 .tm-list-item-img-big {
     margin-right: 25px;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 600px;
 }
 
 .tm-list-item-text {
