@@ -359,15 +359,3 @@ h2 { margin-top: 0; }
     .tm-drinks-nav > ul > li { margin-bottom: 10px; }
     .tm-drinks-nav > ul > li > a { display: block; }
 }
-
-#authArea {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-}
-
-#userInfo {
-	color: #ffffff;
-	font-sizze: 16px;
-	display: inline-block;
-}
