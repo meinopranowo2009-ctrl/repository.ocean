@@ -363,5 +363,9 @@ h2 { margin-top: 0; }
 #authArea {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 15px;
+}
+
+#userInfo {
+	margin: 0;
 }
